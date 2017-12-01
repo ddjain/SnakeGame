@@ -22,12 +22,16 @@ public class MainWindow implements KeyListener {
 	JRadioButton jb;
 	JLabel scores;
 	int speed;
-public void increaseSpeed() {
-	if(point%5==0) {
-	speed--;
+
+	public void increaseSpeed() {
+		if (point % 5 == 0) {
+			if (speed > 1) {
+				speed--;
+			}
+		}
+
 	}
-	
-}
+
 	public void generateFruit() {
 		increaseSpeed();
 		Fruit_X = (int) Math.floor(Math.random() * 1000 % 468);
@@ -66,7 +70,7 @@ public void increaseSpeed() {
 			public void run() {
 				int i = 1;
 				while (true) {
-					System.out.println("SPPED:"+speed+"  SNAKE: X= " + X_POS + "  Y = " + Y_POS);
+					System.out.println("SPPED:" + speed + "  SNAKE: X= " + X_POS + "  Y = " + Y_POS);
 					int xdiff = X_POS - Fruit_X;
 					int ydiff = Y_POS - Fruit_Y;
 					if (xdiff > -10 && xdiff < 10 && ydiff > -10 && ydiff < 10) {
@@ -147,7 +151,7 @@ public void increaseSpeed() {
 
 		}
 		if (e.getKeyCode() == KeyEvent.VK_ADD) {
-			speed--;
+			increaseSpeed();
 		}
 		if (e.getKeyCode() == KeyEvent.VK_SUBTRACT) {
 			speed++;
