@@ -1,17 +1,18 @@
-import java.awt.Graphics;
-import java.awt.Image;
-import java.awt.Label;
-import java.awt.Point;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-import java.net.URL;
-import java.util.Random;
 
-import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JRadioButton;
 
+
+/**
+ * @author DarshanJain
+ * @category Game
+ * @version 1.01
+ * @email nnd.darshan@gmail.com
+ * @mobile 8421761442
+ */
 public class MainWindow implements KeyListener {
 	JFrame jf;
 	JLabel fruit;
@@ -29,7 +30,6 @@ public class MainWindow implements KeyListener {
 				speed--;
 			}
 		}
-
 	}
 
 	public void generateFruit() {
@@ -67,6 +67,7 @@ public class MainWindow implements KeyListener {
 
 	private void callToSnake() {
 		new Thread() {
+			@Override
 			public void run() {
 				int i = 1;
 				while (true) {
@@ -114,7 +115,6 @@ public class MainWindow implements KeyListener {
 
 	@Override
 	public void keyTyped(KeyEvent e) {
-
 	}
 
 	@Override
