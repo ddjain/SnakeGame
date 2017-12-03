@@ -17,4 +17,5 @@ Note: To run the game, you need to install JDK 1.7 or above java version and run
 # > javac MainWindow.java
 
 # > java MainWindow
-
+# or
+# Directly run Snake.jar
